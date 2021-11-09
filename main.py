@@ -18,11 +18,11 @@ while n < 48:
         r = 2 * 1.36
         bt = 13.4
     db = 86400 / bt
-    ceth = ((hr * r * db) / (dif_list[n] * 1e11)) * 30
-    eth = eth + ((hr * r * db) / (dif_list[n] * 1e11)) * 30
+    ceth = ((hr * r * db) / (dif_list[n] * 1e11)) * 30.41
+    eth = eth + ((hr * r * db) / (dif_list[n] * 1e11)) * 30.41
     n += 1
     print("After " + str(n) + " Month(s): " + str(eth) + " ETH.")
     print("ETH mined this month: " + str(ceth))
 print( )
-print("USD value on Nov 1 2021 (ETH @ $4300): " + '${:,.2f}'.format(eth * 4300))
+print("USD value on Nov 1 2021 from " + str(mhr) + " MH/s (ETH @ $4300): " + '${:,.2f}'.format(eth * 4300))
 print("ETH Monthly @ 11.14P difficulty (~Nov 2021): " + str(((hr * 2 * 1.36 * db) / dif) * 30))
